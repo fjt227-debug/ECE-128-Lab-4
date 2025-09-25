@@ -35,7 +35,7 @@ reg [27:0] shift_reg;
 always @* begin
     shift_reg=28'd0;
     shift_reg[11:0] = bin;
-    for (i=0; i<12; i=1+1) begin
+	for (i=0; i<12; i=i+1) begin
 	   if (shift_reg[15:12] >= 5)//ones
 	   shift_reg[15:12] = shift_reg[15:12]+3;
 	   if (shift_reg[19:16] >= 5)//tens
